@@ -6,6 +6,7 @@ import { Mypage } from "../components/Pages/Mypage";
 import { MypageAccount } from "../components/Pages/MypageAccount";
 import { MypagePassword } from "../components/Pages/MypagePassword";
 import { NotFound } from "../components/Pages/NotFound";
+import { HeaderLayout } from "../components/templates/HeaderLayout";
 
 /**
  * layoutを指定する場合
@@ -16,7 +17,14 @@ export const Router: FC = memo(() => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/mypage" element={<Mypage />}>
+        <Route
+          path="/mypage"
+          element={
+            <HeaderLayout>
+              <Mypage />
+            </HeaderLayout>
+          }
+        >
           <Route path="account" element={<MypageAccount />} />
           <Route path="password" element={<MypagePassword />} />
         </Route>

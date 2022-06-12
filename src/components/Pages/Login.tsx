@@ -7,9 +7,15 @@ import {
   Input,
   Stack
 } from "@chakra-ui/react";
-import { FC, memo } from "react";
+import { FC, memo, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Login: FC = memo(() => {
+  const navigate = useNavigate();
+  const onClickMypage = useCallback(() => {
+    navigate("/mypage");
+  }, [navigate]);
+
   return (
     <Flex align="center" justify="center" height="100vh">
       <Box bg="gray.50" w="sm" p={5} borderRadius="md" shadow="lg">
@@ -19,7 +25,11 @@ export const Login: FC = memo(() => {
         <Divider my={5} />
         <Stack spacing={2} py={5} px={5}>
           <Input placeholder="login ID" />
-          <Button bg="orange.200" _hover={{ opacity: 0.5 }}>
+          <Button
+            bg="orange.200"
+            _hover={{ opacity: 0.5 }}
+            onClick={onClickMypage}
+          >
             LOGIN
           </Button>
         </Stack>

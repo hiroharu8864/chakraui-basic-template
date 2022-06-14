@@ -76,9 +76,15 @@ export const Header: FC = memo(() => {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerBody p={0} bg="gray.200">
-              <Button w="100%">アカウント</Button>
-              <Button w="100%">パスワード</Button>
-              <Button w="100%">ログアウト</Button>
+              <Button w="100%" onClick={onClickMypageAccount}>
+                アカウント
+              </Button>
+              <Button w="100%" onClick={onClickMypagePassword}>
+                パスワード
+              </Button>
+              <Button w="100%" onClick={onClickLogin}>
+                ログアウト
+              </Button>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>

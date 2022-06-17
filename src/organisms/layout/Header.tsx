@@ -28,6 +28,9 @@ export const Header: FC = memo(() => {
   const onClickMypagePassword = useCallback(() => {
     navigate("/mypage/password");
   }, [navigate]);
+  const onClickMypageComment = useCallback(() => {
+    navigate("/mypage/comment");
+  }, [navigate]);
 
   return (
     <>
@@ -49,7 +52,7 @@ export const Header: FC = memo(() => {
           fontSize="sm"
           flexGrow={2}
           mr={4}
-          display={{ base: "none", md: "flex" }}
+          display={{ base: "block", md: "flex" }}
         >
           <Box pr={4}>
             <Link mr={2} onClick={onClickMypageAccount}>
@@ -57,6 +60,9 @@ export const Header: FC = memo(() => {
             </Link>
             <Link mr={2} onClick={onClickMypagePassword}>
               パスワード
+            </Link>
+            <Link mr={2} onClick={onClickMypageComment}>
+              コメントAPI取得
             </Link>
             <Link mr={2} onClick={onClickLogin}>
               ログアウト

@@ -1,5 +1,7 @@
 import { FC, memo } from "react";
-import { QueryClient } from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevTools } from "react-query-devtools";
+import { BrandGithub } from "tabler-icons-react";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -11,5 +13,9 @@ const queryClient = new QueryClient({
 });
 
 export const QueryCheck: FC = memo(() => {
-  return <p>QueryCheck Page</p>;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevTools initialIsOpen={false} />
+    </QueryClientProvider>
+  );
 });

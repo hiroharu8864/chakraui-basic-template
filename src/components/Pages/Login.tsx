@@ -15,6 +15,9 @@ export const Login: FC = memo(() => {
   const onClickMypage = useCallback(() => {
     navigate("/mypage");
   }, [navigate]);
+  const onClickQueryCheck = useCallback(() => {
+    navigate("/query");
+  }, [navigate]);
 
   return (
     <Flex align="center" justify="center" height="100vh">
@@ -31,6 +34,13 @@ export const Login: FC = memo(() => {
             onClick={onClickMypage}
           >
             LOGIN
+          </Button>
+          <Button
+            bg="orange.200"
+            _hover={{ opacity: 0.5 }}
+            onClick={onClickQueryCheck}
+          >
+            QuecyCkeck
           </Button>
         </Stack>
       </Box>

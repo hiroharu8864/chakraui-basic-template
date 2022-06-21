@@ -17,7 +17,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 
 export const Header: FC = memo(() => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  /** useHistory is not a function */
+  /** useHistory is not a func9tion */
   const navigate = useNavigate();
   const onClickLogin = useCallback(() => {
     navigate("/");

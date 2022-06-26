@@ -15,6 +15,9 @@ export const Login: FC = memo(() => {
   const onClickMypage = useCallback(() => {
     navigate("/mypage");
   }, [navigate]);
+  const onClickButtonSample = useCallback(() => {
+    navigate("/button");
+  }, [navigate]);
 
   return (
     <Flex align="center" justify="center" height="100vh">
@@ -31,6 +34,15 @@ export const Login: FC = memo(() => {
             onClick={onClickMypage}
           >
             LOGIN
+          </Button>
+        </Stack>
+        <Stack spacing={2} py={5} px={5}>
+          <Button
+            bg="pink.200"
+            _hover={{ opacity: 0.5 }}
+            onClick={onClickButtonSample}
+          >
+            Button Sample Page
           </Button>
         </Stack>
       </Box>

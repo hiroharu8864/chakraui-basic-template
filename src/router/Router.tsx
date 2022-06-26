@@ -7,6 +7,7 @@ import { MypageAccount } from "../components/Pages/MypageAccount";
 import { MypagePassword } from "../components/Pages/MypagePassword";
 import { MypageComment } from "../components/Pages/MypageComment";
 import { ButtonSample } from "../components/Pages/ButtonSample";
+import { Timer } from "../components/Pages/Timer";
 import { NotFound } from "../components/Pages/NotFound";
 import { HeaderLayout } from "../components/templates/HeaderLayout";
 
@@ -32,6 +33,7 @@ export const Router: FC = memo(() => {
           <Route path="comment" element={<MypageComment />} />
         </Route>
         <Route path="button" element={<ButtonSample />} />
+        <Route path="timer" element={<Timer />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
